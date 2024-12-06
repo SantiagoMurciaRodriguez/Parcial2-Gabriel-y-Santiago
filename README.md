@@ -1,4 +1,5 @@
 # Parcial2
+Parcial2 Juan Gabriel Cardona 1002635442 / Santiago Murcia 1054857875
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
 
