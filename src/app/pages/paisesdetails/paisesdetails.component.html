@@ -1,0 +1,15 @@
+@if (selectedPais) {
+    <div class="container">
+        <img class="banderita" src="{{selectedPais.bandera}}" alt="" srcset="">
+        <h2>{{selectedPais.nombre}}</h2>
+
+        <div class="info text-center">
+            <p>Capital: {{selectedPais.capital}}</p>
+            <p>Region: {{selectedPais.region}}</p>
+            <p>Poblacion: {{selectedPais.poblacion}}</p>
+            <p>Area: {{selectedPais.area}}</p>
+        </div>
+    </div>
+} @else {
+    <h2>No se encontro pais</h2>
+}

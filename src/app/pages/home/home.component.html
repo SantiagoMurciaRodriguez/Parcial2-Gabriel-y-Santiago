@@ -1,0 +1,33 @@
+<p>Paises</p>
+<a class="btn" (click)="cambiarview()">
+    <span>Cambiar Vista</span>
+</a>
+
+<div class="container">
+    @if (estado) {
+        @for (pais of mispaises; track $index) {
+            <div class="book">
+                <div class="info">
+                    <p>{{pais.nombre}}</p>
+                    <a [routerLink]="['/detalles', pais.nombre]" class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Ver más</span>
+                    </a>
+                </div>
+                <div class="cover">
+                    <img class="img" src="{{pais.bandera}}" alt="">
+                </div>
+            </div>
+        }
+    } @else {
+        <ol class="list-group list-group-numbered">
+            @for (pais of mispaises; track $index) {
+                <li class="list-group-item">
+                    <a [routerLink]= "['/detalles', pais.nombre]" class="list-group-item list-group-item-action list-group-item-danger">Nombre: {{pais.nombre}}</a>
+                </li>
+            }
+          </ol>
+    }
+</div>
